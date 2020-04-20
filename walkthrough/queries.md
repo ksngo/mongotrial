@@ -60,3 +60,21 @@ db.movies.find({
     'awards.nominations' : { $gte:3 },
     'awards.wins' : { $gte:3 } 
 }, {title:1, 'awards.nominations':1, 'awards.wins':1}).limit(5).pretty()
+
+<!-- g -->
+
+db.movies.find({
+    cast : 'Tom Cruise'
+}, {title:1, cast:1})
+
+<!-- h -->
+
+db.movies.find({
+    directors:'Charles Chaplin'
+}, {title:1, directors:1})
+
+<!-- 3. a -->
+
+db.theaters.find({
+    'location.address.state' : 'AZ'
+}, {theaterId:1, 'location.address.state':1})
