@@ -78,3 +78,13 @@ db.movies.find({
 db.theaters.find({
     'location.address.state' : 'AZ'
 }, {theaterId:1, 'location.address.state':1})
+
+db.listingsAndReviews.aggregate([
+    {$group: {
+        _id: '$property_type',
+        count:{
+            $sum:1
+        }
+    }}
+
+])
