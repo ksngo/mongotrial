@@ -37,3 +37,6 @@ We continually tweak and adjust this template to help give you the best experien
 --------
 
 Happy coding!
+
+
+export MONGO_URI="mongodb+srv://cluster0-edktx.mongodb.net/test"  --username root
